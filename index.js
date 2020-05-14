@@ -40,6 +40,7 @@ function sayGoodbye(name) {
   return `Goodbye, ${name}. Have a great day.`
 }
 
+
 /**
  * ### Challenge `temperatureCtoF`
  * 
@@ -57,6 +58,7 @@ function sayGoodbye(name) {
 function temperatureCtoF(temperature) {
   return Math.round(temperature*9/5 + 32);
 }
+
 
 /**
  * ### Challenge `temperatureInF`
@@ -79,6 +81,7 @@ function temperatureInF(temperature, measurementSystem) {
   if(measurementSystem === 'F') return `${temperature}F`;
   return `${temperatureCtoF(temperature)}F`;
 }
+
 
 /**
  * ### Challenge `makePersonObject`
@@ -104,6 +107,7 @@ function makePersonObject(id, name, email) {
   };
 }
 
+
 /**
  * ### Challenge `getName`
  * 
@@ -117,8 +121,8 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(unknownObject) {
+  return `Hello, my name is ${unknownObject.name}`;
 }
 
 
