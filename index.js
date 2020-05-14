@@ -75,10 +75,10 @@ function temperatureCtoF(temperature) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temperature, measurementSystem) {
+  if(measurementSystem === 'F') return `${temperature}F`;
+  return `${temperatureCtoF(temperature)}F`;
 }
-
 
 /**
  * ### Challenge `makePersonObject`
