@@ -240,7 +240,6 @@ function getLastCarInfo(inventory) {
   return `This is a ${inventory[inventory.length-1].car_make} ${inventory[inventory.length-1].car_model}`;
 }
 inventory = require('./data/inventory');
-// console.log(getLastCarInfo(inventory));
 
 /**
  * ### Challenge `getModelYears`
@@ -258,7 +257,6 @@ function getModelYears(inventory) {
   }
   return modelYears;
 }
-console.log(getModelYears(inventory));
 
 /**
  * ### Challenge `getCarInfoById`
@@ -274,9 +272,12 @@ console.log(getModelYears(inventory));
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  for (let car of inventory) {
+    if (car.id === id) return `This is a ${car.car_make} ${car.car_model}`;
+  }
 }
+console.log(getCarInfoById(inventory, 30));
 
 /**
  * ### Challenge `getOlderCars`
